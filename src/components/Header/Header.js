@@ -7,10 +7,10 @@ import { Search } from '@mui/icons-material';
 
 function Header() {
   return (
-    <header>
+    <header className="header flex-center-between">
       <div className="header__logo">
-        <StorefrontIcon className="header_logoImage" fontSize="large"/>
-        <span className="header_logoTitle">J@S eSHOP</span>
+        <StorefrontIcon className="header__logoImage" fontSize="large"/>
+        <span className="header__logoTitle">J@S eSHOP</span>
       </div>
       <div className="header__search">
         <input type="text" className="header__searchInput"/>
@@ -25,9 +25,9 @@ function Header() {
           <span className="nav__itemLine1">Your</span>
           <span className="nav__itemLine2">Shop</span>
         </div>
-        <div className="nav__item">
-          <ShoppingBasketIcon fontSize="large"/>
-          <span className="nav__itemLine2">0</span>
+        <div className="nav__itemBasket">
+          <ShoppingBasketIcon className="itemBasket" fontSize="large"/>
+          <span className="nav__itemLine2 nav__basketCount">0</span>
         </div>
       </div>
     </header>
