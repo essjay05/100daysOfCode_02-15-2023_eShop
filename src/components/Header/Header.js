@@ -1,5 +1,4 @@
 import './Header.css'
-import '../../App.css'
 
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';

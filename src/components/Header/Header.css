@@ -1,3 +1,5 @@
+@import '../../index.css';
+
 .header {
   display: flex;
   align-items: center;
@@ -38,7 +40,7 @@
 }
 
 .header__searchInput {
-  height: 1.25rem;
+  height: 1.5rem;
   width: 100%;
   padding: 0.25rem;
   border: none;
