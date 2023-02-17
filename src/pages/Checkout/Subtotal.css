@@ -12,6 +12,10 @@
   background-color: var(--light-grey-color);
 }
 
+.subtotal__amt {
+  font-weight: 800;
+}
+
 .subtotal__gift {
   display: flex;
   align-items: center;
