@@ -1,0 +1,23 @@
+@import '../../index.css';
+
+.checkoutProduct {
+  display: flex;
+  align-items: flex-start;
+}
+
+.checkoutProduct__image {
+  width: 8rem;
+  height: 10rem;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.checkoutProduct button {
+  background: var(--orange-color);
+  border: 1px solid;
+  border-color: var(--dark-grey-color);
+  border-radius: var(--default-border-radius);
+  margin: 0.75rem auto;
+  padding: 0.25rem 0.5rem;
+  color: var(--black-color);
+}

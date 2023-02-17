@@ -1,4 +1,5 @@
 import './Checkout.css'
+import './CheckoutProduct.css'
 import { Currency } from 'react-tender'
 
 function CheckoutProduct({ title, imageUrl, price, rating }) {

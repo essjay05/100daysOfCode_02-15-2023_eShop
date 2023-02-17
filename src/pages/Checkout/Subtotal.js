@@ -1,4 +1,5 @@
 import './Checkout.css'
+import './Subtotal.css'
 import { Currency } from 'react-tender'
 
 function Subtotal() {
