@@ -1,21 +1,33 @@
 @import '../../index.css';
 
-.checkout__ad {
-  max-width: 100vw;
-  object-fit: cover;
+.checkout {
+  display: flex;
+  padding: 1.25rem;
+  background-color: var(--off-white);
+  height: max-content;
 }
 
-.checkout__container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+.checkout__ad {
+  width: 100%;
+  margin-bottom: 0.75rem;
 }
 
 .checkout__left {
-  width: 65%;
+  display: flex;
+  flex-direction: column;
 }
 
-.checkout__right {
-  width: 33%;
-  margin: 1rem;
+.checkout__title {
+  margin-right: 0.75rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--light-grey-color);
 }
+
+/* .checkout__right {
+  width: 25%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-grey-color);
+  border: 1px solid var(--black-color);
+} */
