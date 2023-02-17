@@ -1,8 +1,20 @@
 import './Checkout.css'
 import './CheckoutProduct.css'
 import { Currency } from 'react-tender'
+import { useStateValue } from '../../store/StateProvider'
 
 function CheckoutProduct({ id, title, imageUrl, price, rating }) {
+  
+  const [{ basket }, dispatch] = useStateValue()
+  
+  const removeFromBasket = () => {
+    dispatch({
+      type: 'REMOVE_FROM_BASKET',
+      id: id,
+    })
+
+  }
+
   return (
     <div className='checkoutProduct'>
       <img src={imageUrl} alt={title} className="checkoutProduct__image" />
@@ -16,7 +28,7 @@ function CheckoutProduct({ id, title, imageUrl, price, rating }) {
           Array(rating).fill().map((_, i) => (
             <p>⭐️</p>
         ))}</div>
-        <button>Remove from Basket</button>
+        <button onClick={removeFromBasket}>Remove from Basket</button>
       </div>
       
     </div>
