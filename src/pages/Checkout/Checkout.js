@@ -17,9 +17,9 @@ function Checkout() {
             Your Shopping Basket
           </h2>
           {basket.length > 0 ?
-            basket.map(item => (
+            basket.map((item, index) => (
               <CheckoutProduct
-                key={item.title}
+                key={index}
                 id={item.id}
                 imageUrl={item.imageUrl}
                 title={item.title}
