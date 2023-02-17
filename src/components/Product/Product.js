@@ -1,7 +1,25 @@
 import './Product.css'
 import { Currency } from 'react-tender'
 
-function Product({ title, price, rating, imageUrl }) {
+import { useStateValue } from '../../store/StateProvider'
+
+function Product({ id, title, price, rating, imageUrl }) {
+  
+  const [state, dispatch] = useStateValue()
+
+  const addToBasket = () => {
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: {
+        id: id,
+        title: title,
+        imageUrl: imageUrl,
+        price: price,
+        rating: rating
+      }
+    })
+  }
+
   return (
     <div className="product">
       <div className="product__details">
@@ -15,7 +33,7 @@ function Product({ title, price, rating, imageUrl }) {
         ))}</div>
       </div>
       <img src={ imageUrl } alt={ title } className="product__image" />
-      <button>Add to Basket</button>
+      <button onClick={addToBasket}>Add to Basket</button>
     </div>
   )
 }
