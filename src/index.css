@@ -39,6 +39,20 @@ code {
     monospace;
 }
 
+main {
+  padding-bottom: 2.75rem;
+}
+
+button {
+  background: var(--orange-color);
+  border: 1px solid;
+  border-color: var(--dark-grey-color);
+  border-radius: var(--default-border-radius);
+  margin: 0.75rem auto;
+  padding: 0.25rem 0.5rem;
+  color: var(--black-color);
+}
+
 button:hover,
 button:focus {
   cursor: pointer;
