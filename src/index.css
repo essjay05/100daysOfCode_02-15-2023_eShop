@@ -43,6 +43,10 @@ main {
   padding-bottom: 2.75rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 button {
   background: var(--orange-color);
   border: 1px solid;
@@ -53,6 +57,8 @@ button {
   color: var(--black-color);
 }
 
+a:hover,
+a:focus,
 button:hover,
 button:focus {
   cursor: pointer;
