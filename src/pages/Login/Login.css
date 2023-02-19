@@ -1,0 +1,77 @@
+@import '../../index.css';
+
+.login {
+  background: var(--off-white-color);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__logoLink,
+.login__logo {
+  height: 1.875rem;
+  text-decoration: none;
+}
+
+.login__logoLink {
+  position: relative;
+  top: 1.25rem;
+}
+
+.login .login__logo {
+  display: flex;
+  margin: 1.875rem 0;
+  align-items: center;
+}
+
+.login__logoIcon {
+  color: var(--orange-color);
+}
+
+.login__logoText {
+  color: var(--black-color);
+  font-weight: 600;
+}
+
+.login__container {
+  width: 22rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: -moz-fit-content;
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--light-grey-color);
+  padding: 2.5rem;
+}
+
+.login__container > h1 {
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.login__container > form > label {
+  margin-bottom: 0.3rem;
+}
+
+.login__container > form > input {
+  height: 1.875rem;
+  margin-bottom: 0.625rem;
+  background-color: var(--white-color);
+  width: 98%;
+}
+
+.login__container > p {
+  margin-top: 0.9375rem;
+  font-size: 0.75rem;
+}
+
+.login button {
+  width: 100%;
+  height: 1.875rem;
+}
+
+.login__registerBtn {
+  background-color: var(--light-grey-color);
+}
