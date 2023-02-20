@@ -5,7 +5,8 @@ import './App.css'
 
 import Home from './pages/Home/Home'
 import Checkout from './pages/Checkout/Checkout'
-import Login from './pages/Login/Login'
+import Login from './pages/Auth/Login'
+import Signup from './pages/Auth/Signup'
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Header/>
       </div>
       <Routes>
-        <Route path='/login' pageTitle='Sign In' element={<Login />}/>
+        <Route path='/login' pageTitle='Log In' element={<Login />}/>
+        <Route path='/signup' pageTitle='Sign Up' element={<Signup />}/>
         <Route path='/checkout' pageTitle='Checkout' element={<Checkout />}/>
         <Route path='/' pageTitle='Home' render element={<Home />}/>
       </Routes>

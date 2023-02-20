@@ -1,3 +1,7 @@
+import { useEffect, useState } from 'react'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { auth } from '../../firebase'
+
 import './Header.css'
 
 import StorefrontIcon from '@mui/icons-material/Storefront';
@@ -10,7 +14,21 @@ import { useStateValue } from '../../store/StateProvider'
 
 function Header() {
 
+  const [authUser, setAuthUser] = useState(null)
   const [{basket}, dispatch] = useStateValue()
+
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setAuthUser(user)
+      } else {
+        setAuthUser(null)
+      }
+    })
+    return () => {
+      listen()
+    }
+  }, [])
 
   return (
     <header className="header flex-center-between">
@@ -25,12 +43,19 @@ function Header() {
         <Search className="header__searchIcon"/>
       </div>
       <div className="header__nav">
-        <Link to='/login'>
+        { authUser ?
           <div className="nav__item">
-            <span className="nav__itemLine1">Hello Guest</span>
-            <span className="nav__itemLine2">Sign In</span>
+            <span className="nav__itemLine1">Hello {authUser.email}</span>
+            <span className="nav__itemLine2 link" onclick={signOut}>Sign Out</span>
           </div>
-        </Link>
+          :
+          <Link to='/login'>
+            <div className="nav__item">
+              <span className="nav__itemLine1">Hello Guest</span>
+              <span className="nav__itemLine2">Sign In</span>
+            </div>
+          </Link>
+        }
         <div className="nav__item">
           <span className="nav__itemLine1">Your</span>
           <span className="nav__itemLine2">Shop</span>

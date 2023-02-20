@@ -63,6 +63,8 @@ a:focus,
 button:hover,
 button:focus,
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.link:hover,
+.link:focus {
   cursor: pointer;
 }
