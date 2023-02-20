@@ -68,9 +68,11 @@
   font-size: 0.75rem;
 }
 
-.login button {
+.login button,
+.login .btn {
   width: 100%;
   height: 1.875rem;
+  text-align: center;
 }
 
 .login__registerBtn {

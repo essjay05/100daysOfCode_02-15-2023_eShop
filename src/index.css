@@ -47,7 +47,8 @@ a {
   text-decoration: none;
 }
 
-button {
+button,
+.btn {
   background: var(--orange-color);
   border: 1px solid;
   border-color: var(--dark-grey-color);
@@ -60,6 +61,8 @@ button {
 a:hover,
 a:focus,
 button:hover,
-button:focus {
+button:focus,
+.btn:hover,
+.btn:focus {
   cursor: pointer;
 }
