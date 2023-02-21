@@ -30,6 +30,12 @@ function Header() {
     }
   }, [])
 
+  const userSignOut = () => {
+    signOut(auth).then(() => {
+      console.log(`Sign out is successful.`)
+    }).catch(err => console.error(err))
+  }
+
   return (
     <header className="header flex-center-between">
       <Link to='/'>
@@ -46,7 +52,7 @@ function Header() {
         { authUser ?
           <div className="nav__item">
             <span className="nav__itemLine1">Hello {authUser.email}</span>
-            <span className="nav__itemLine2 link" onclick={signOut}>Sign Out</span>
+            <span className="nav__itemLine2 link" onClick={userSignOut}>Sign Out</span>
           </div>
           :
           <Link to='/login'>

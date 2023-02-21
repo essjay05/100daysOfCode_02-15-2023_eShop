@@ -50,9 +50,9 @@ function Auth({ authType, pageTitle }) {
       <section className='auth__container'>
         <h1>{ pageTitle }</h1>
         <form>
-          <label for='email'>E-mail</label>
+          <label htmlFor='email'>E-mail</label>
           <input type='text' aria-labelledby='email' value={email} onChange={e => setEmail(e.target.value)}/>
-          <label for='password'>Password</label>
+          <label htmlFor='password'>Password</label>
           <input type='password' aria-labelledby='password' value={password} onChange={e => setPassword(e.target.value)}/>
           { authValue === 'login' ? 
             <button type='submit' className='auth__signInBtn' onClick={signIn}>Sign In</button>
